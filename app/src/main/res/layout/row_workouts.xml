@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/workoutRowID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/workoutRowNameID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Workout Name"
+                android:textColor="@color/colorTextMain"
+                android:textSize="18sp"
+                app:fontFamily="@font/changa"
+                app:layout_constraintStart_toEndOf="@+id/workoutRowImgID"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/workoutRowLastID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last: 00/00/00"
+                android:textColor="@color/colorTextSecondary"
+                app:fontFamily="@font/changa"
+                app:layout_constraintBottom_toBottomOf="@+id/workoutRowNameID"
+                app:layout_constraintStart_toStartOf="@+id/workoutRowNameID"
+                app:layout_constraintTop_toBottomOf="@+id/workoutRowNameID" />
+
+            <ImageView
+                android:id="@+id/workoutRowImgID"
+                android:layout_width="@dimen/button_075"
+                android:layout_height="@dimen/button_075"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_fitness_24dp" />
+
+            <ImageView
+                android:id="@+id/workoutRowEditID"
+                android:layout_width="@dimen/button_050"
+                android:layout_height="@dimen/button_050"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:tint="@color/colorButtonSecondary"
+                app:layout_constraintBottom_toBottomOf="@+id/workoutRowStartID"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/workoutRowStartID"
+                app:srcCompat="@drawable/ic_edit_24dp" />
+
+            <ImageView
+                android:id="@+id/workoutRowStartID"
+                android:layout_width="@dimen/button_075"
+                android:layout_height="@dimen/button_075"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:tint="@color/colorButtonPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/workoutRowEditID"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_play_circle_24dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ExerciseActivity">
+
+    <TextView
+        android:id="@+id/restCountdownID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorButtonSecondary"
+        android:padding="16dp"
+        android:paddingRight="16dp"
+        android:text="00:00"
+        android:textColor="@android:color/white"
+        android:textSize="60sp"
+        app:fontFamily="@font/russo_one"
+        app:layout_constraintEnd_toStartOf="@+id/pauseRestButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/routineButtonID"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pauseRestButton"
+        android:layout_width="@dimen/button_075"
+        android:layout_height="@dimen/button_075"
+        android:tint="@color/colorButtonPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/restCountdownID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/restCountdownID"
+        app:layout_constraintTop_toTopOf="@+id/restCountdownID"
+        app:srcCompat="@drawable/ic_pause_outline_24dp" />
+
+    <ImageView
+        android:id="@+id/routineButtonID"
+        android:layout_width="@dimen/button_075"
+        android:layout_height="@dimen/button_075"
+        android:padding="6dp"
+        android:tint="@color/colorTextSecondary"
+        app:layout_constraintEnd_toStartOf="@+id/restCountdownID"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pauseRestButton"
+        app:srcCompat="@drawable/ic_fitness_24dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/repsListID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider3" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorTextSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/exerciseNameID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/previousExerciseButtonID"
+        android:layout_width="@dimen/button_050"
+        android:layout_height="@dimen/button_050"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:tint="@color/colorTextSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/finishWorkoutButtonID"
+        app:layout_constraintEnd_toStartOf="@+id/finishWorkoutButtonID"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/finishWorkoutButtonID"
+        app:srcCompat="@drawable/ic_arrow_left_24dp" />
+
+    <ImageView
+        android:id="@+id/nextExerciseButtonID"
+        android:layout_width="@dimen/button_050"
+        android:layout_height="@dimen/button_050"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:tint="@color/colorTextSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/finishWorkoutButtonID"
+        app:layout_constraintTop_toTopOf="@+id/previousExerciseButtonID"
+        app:srcCompat="@drawable/ic_arrow_right_24dp" />
+
+    <Button
+        android:id="@+id/finishWorkoutButtonID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_red_dark"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="FINISH WORKOUT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextExerciseButtonID"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/previousExerciseButtonID" />
+
+    <TextView
+        android:id="@+id/exerciseNameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="EXERCISE NAME"
+        android:textColor="@color/colorTextMain"
+        android:textSize="30sp"
+        app:fontFamily="@font/changa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restCountdownID" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

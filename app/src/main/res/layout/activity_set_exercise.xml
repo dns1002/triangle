@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetExerciseActivity">
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/imageView7"
+        android:layout_width="@dimen/button_050"
+        android:layout_height="@dimen/button_050"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:tint="#00000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/textView8"
+        app:srcCompat="@drawable/ic_add_24dp" />
+
+    <ImageView
+        android:id="@+id/setExerciseImgID"
+        android:layout_width="@dimen/button_150"
+        android:layout_height="@dimen/button_150"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bench_press" />
+
+    <TextView
+        android:id="@+id/setExerciseNameID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Exercise name"
+        android:textSize="24sp"
+        app:fontFamily="@font/changa"
+        app:layout_constraintEnd_toStartOf="@+id/setExerciseEditButtonID"
+        app:layout_constraintStart_toEndOf="@+id/setExerciseImgID"
+        app:layout_constraintTop_toTopOf="@+id/setExerciseImgID" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Reps:"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="18sp"
+        app:fontFamily="@font/changa"
+        app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setExerciseImgID" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Weight:"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="18sp"
+        app:fontFamily="@font/changa"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/setExerciseImgID" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Rest:"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="18sp"
+        app:fontFamily="@font/changa"
+        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+    <ImageView
+        android:id="@+id/setExerciseAddButtonID"
+        android:layout_width="@dimen/button_050"
+        android:layout_height="@dimen/button_050"
+        android:layout_marginTop="16dp"
+        android:tint="@color/colorButtonPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/setExerciseSeriesListID"
+        app:layout_constraintTop_toBottomOf="@+id/setExerciseSeriesListID"
+        app:srcCompat="@drawable/ic_add_24dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/setExerciseSeriesListID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <ImageView
+        android:id="@+id/setExerciseEditButtonID"
+        android:layout_width="@dimen/button_050"
+        android:layout_height="@dimen/button_050"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/setExerciseNameID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/setExerciseNameID"
+        app:srcCompat="@drawable/ic_edit_24dp" />
+
+    <TextView
+        android:id="@+id/setExerciseDescriptionID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Description"
+        android:textColor="@color/colorTextSecondary"
+        app:fontFamily="@font/changa"
+        app:layout_constraintBottom_toBottomOf="@+id/setExerciseImgID"
+        app:layout_constraintEnd_toEndOf="@+id/setExerciseNameID"
+        app:layout_constraintStart_toStartOf="@+id/setExerciseNameID"
+        app:layout_constraintTop_toBottomOf="@+id/setExerciseNameID" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

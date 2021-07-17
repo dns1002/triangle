@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "480592011686",
+    "firebase_url": "https://triangle-494d8.firebaseio.com",
+    "project_id": "triangle-494d8",
+    "storage_bucket": "triangle-494d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480592011686:android:127c0657473a6898ae2f67",
+        "android_client_info": {
+          "package_name": "com.ddns1002.triangle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480592011686-dmb6tfpfb8b4qm9tgmvchkmkvbq39ar3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ddns1002.triangle",
+            "certificate_hash": "e902fd31ebbc64fdf55e8624366372244a3cb73d"
+          }
+        },
+        {
+          "client_id": "480592011686-jp616vfm7eon1r2dlkdird7umjnmlnqa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7vcpn0YSu34GoCu2sU8MKVgCCnwfa4c0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480592011686-jp616vfm7eon1r2dlkdird7umjnmlnqa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Triangle</string>
+    <string name="workout_add">Add new workout routine to the package</string>
+    <string name="workout_delete">Delete workout routine from the package</string>
+    <string name="workout_copy">Copy workout routine from the package</string>
+    <string name="profileButton_description">Profile info and settings</string>
+    <string name="statisticsButton_description">Statistics of the user</string>
+    <string name="calendarButton_description">Calendar of workouts performed</string>
+    <string name="settingsButton_description">Settings</string>
+    <string name="packageSelection_description">Package of workout routines</string>
+
+</resources>

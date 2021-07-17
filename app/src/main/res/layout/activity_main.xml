@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workoutListID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRoutinesID" />
+
+    <ImageView
+        android:id="@+id/buttonAddWorkoutID"
+        android:layout_width="@dimen/button_100"
+        android:layout_height="@dimen/button_100"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/workout_add"
+        android:tint="@color/colorButtonPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add_circle_24dp" />
+
+    <ImageView
+        android:id="@+id/buttonCopyWorkoutID"
+        android:layout_width="@dimen/button_050"
+        android:layout_height="@dimen/button_050"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:contentDescription="@string/workout_copy"
+        android:tint="@color/colorButtonSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonDeleteWorkoutID"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDeleteWorkoutID"
+        app:layout_constraintTop_toTopOf="@+id/buttonDeleteWorkoutID"
+        app:srcCompat="@drawable/ic_content_copy_24dp" />
+
+    <ImageView
+        android:id="@+id/buttonDeleteWorkoutID"
+        android:layout_width="@dimen/button_050"
+        android:layout_height="@dimen/button_050"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:contentDescription="@string/workout_delete"
+        android:tint="@color/colorButtonSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonAddWorkoutID"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAddWorkoutID"
+        app:layout_constraintTop_toTopOf="@+id/buttonAddWorkoutID"
+        app:layout_constraintVertical_bias="0.8"
+        app:srcCompat="@drawable/ic_remove_circle_24dp" />
+
+    <ImageView
+        android:id="@+id/buttonProfileID"
+        android:layout_width="@dimen/button_050"
+        android:layout_height="@dimen/button_050"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/profileButton_description"
+        android:tint="@color/colorButtonSecondary"
+        app:layout_constraintBottom_toTopOf="@+id/dividerTopMenu"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCalendarID"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_account_circle_24dp" />
+
+    <ImageView
+        android:id="@+id/buttonCalendarID"
+        android:layout_width="@dimen/button_050"
+        android:layout_height="@dimen/button_050"
+        android:contentDescription="@string/calendarButton_description"
+        android:tint="@color/colorButtonSecondary"
+        app:layout_constraintEnd_toStartOf="@+id/buttonStatisticsID"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonProfileID"
+        app:layout_constraintTop_toTopOf="@+id/buttonProfileID"
+        app:srcCompat="@drawable/ic_event_24dp" />
+
+    <ImageView
+        android:id="@+id/buttonStatisticsID"
+        android:layout_width="@dimen/button_050"
+        android:layout_height="@dimen/button_050"
+        android:contentDescription="@string/statisticsButton_description"
+        android:tint="@color/colorButtonSecondary"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSettingID"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonCalendarID"
+        app:layout_constraintTop_toTopOf="@+id/buttonCalendarID"
+        app:srcCompat="@drawable/ic_chart_24dp" />
+
+    <ImageView
+        android:id="@+id/buttonSettingID"
+        android:layout_width="@dimen/button_050"
+        android:layout_height="@dimen/button_050"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:contentDescription="@string/settingsButton_description"
+        android:tint="@color/colorButtonSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonStatisticsID"
+        app:layout_constraintTop_toTopOf="@+id/buttonStatisticsID"
+        app:srcCompat="@drawable/ic_settings_24dp" />
+
+    <TextView
+        android:id="@+id/textPackageID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/packageSelection_description"
+        android:text="Package: custom"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="18sp"
+        android:typeface="normal"
+        app:fontFamily="@font/changa"
+        app:layout_constraintStart_toStartOf="@+id/buttonProfileID"
+        app:layout_constraintTop_toBottomOf="@+id/dividerTopMenu" />
+
+    <TextView
+        android:id="@+id/textRoutinesID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ROUTINES"
+        android:textColor="@color/colorTextMain"
+        android:textSize="18sp"
+        app:fontFamily="@font/changa"
+        app:layout_constraintStart_toStartOf="@+id/textPackageID"
+        app:layout_constraintTop_toBottomOf="@+id/textPackageID" />
+
+    <View
+        android:id="@+id/dividerRoutines"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorTextMain"
+        app:layout_constraintBottom_toBottomOf="@+id/textRoutinesID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textRoutinesID"
+        app:layout_constraintTop_toTopOf="@+id/textRoutinesID" />
+
+    <View
+        android:id="@+id/dividerTopMenu"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorTextMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonProfileID" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
